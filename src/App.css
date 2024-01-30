@@ -1,38 +1,566 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #090a2d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "Poppins" sans-serif;
+  overflow-x: hidden;
+}
+ul,ol,p{
+  padding: 0;
+  margin: 0;
+}
+.navBox {
+  height: 80px;
+  /* background-color: red; */
+  border: 2px solid red;
+  padding: 5px 20px;
+}
+.link-style {
+  text-decoration: none;
+  color: black;
+}
+.navBox .navB1 .row {
+  /* position: relative; */
+  justify-content: center;
+  align-items: center;
+}
+.navBox .navB1 .row .navLogo img {
+  width: 60%;
+}
+.navBox .navB1 .row .navOption ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 0;
+}
+.navBox .navB1 .row .navOption ul li{
+  
+  font-size: 23px;
+  font-weight: 300;
+  
+  /* border-radius: 5px; */
+  /* padding-top: 8px; */
+}
+.navBox .navB1 .row .navOption ul li .link-style:hover{
+  color: rgba(137, 43, 226, 0.598);
+  
+}
+.myHome-Ddown{
+  /* border: 1px solid black; */
+
+  padding: 16px 10px;
+}
+.my_Color{
+  color: red;
+}
+/* onhover dropdown color  */
+.my_dColor{
+  color: #70bbff;
+}
+.link-Dcolor{
+  text-decoration: none;
+  color: black;
+}
+.navBox .navB1 .row .navOption ul .myHome-Ddown:hover .myDropdown{
+  display: flex;
+}
+.navBox .navB1 .row .navOption ul li .myDropdown{
+ 
+  background-color: white;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  display: none;
+}
+.navBox .navB1 .row .navOption ul li .myDropdown li Link{
+  font-weight: 500;
+  padding-left: 15px;
+}
+.navBox .navB1 .row .navOption ul li #myShopdown{
+  display: none;
+  position: absolute;
+  top: 80px;
+}
+.navBox .navB1 .row .navOption ul .myShop-Ddown:hover #myShopdown{
+  display: flex;
+}
+.navBox .navB1 .row .navOption ul .myShop-Ddown{
+  padding: 16px 10px;
+  border: 1px solid black;
+}
+
+.navBox .navB1 .row .navIcons ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 10px;
+}
+.navBox .navB1 .row .navIcons ul li {
+  padding-left: 15px;
+  width: 20%;
+}
+.navBox .navB1 .row .navIcons ul li .nav-icon {
+  font-size: 25px;
+}
+
+
+/* nav box SHOP dropDown css start */
+.navBox .navB1 .row .navOption ul li #myShopdown section .shopBox{
+  width: 800px;
+  border: 1px solid black;
+}
+.navBox .navB1 .row .navOption ul li #myShopdown section .shopBox .shop-box{
+  margin: auto;
+}
+.navBox .navB1 .row .navOption ul li #myShopdown section .shopBox .shop-box .shopList{
+  display: flex;
+  justify-content: space-around;
+}
+
+.navBox .navB1 .row .navOption ul li #myShopdown section .shopBox .shop-box .shopList ul li h1{
+  font-size: 19px;
+  font-weight: 400;
+  padding: 13px 0px;
+}
+.navBox .navB1 .row .navOption ul li #myShopdown section .shopBox .shop-box .shopList ul{
+  list-style: none;
+}
+.navBox .navB1 .row .navOption ul li #myShopdown section .shopBox .shop-box .shopList ul .shop-h1{
+  border-bottom: 1px solid black;
+}
+.navBox .navB1 .row .navOption ul li #myShopdown section .shopBox .shop-box .shopList ul li {
+  padding: 8px 0px;
+}
+.navBox .navB1 .row .navOption ul li #myShopdown section .shopBox img{
+  padding: 10px 5px;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+}
+/* nav box SHOP dropDown css end*/
+/* header css */
+.homeBox {
+  height: 100vh;
+  background-color: #70bbff;
+}
+.homeBox .homeText h1 {
+  font-size: 57px;
+  font-weight: 800;
+  color: white;
+  padding-top: 25%;
+  padding-left: 15px;
+}
+.homeBox .homeText p {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.homeBox .buttonStyle {
+  font-size: 20px;
+  color: white;
+  margin-top: 32px;
+  padding: 18px 50px;
+  border-radius: 35px;
+  margin-left: 15px;
+  border: none;
+  background-color: #dc3545;
+}
+.homeBox .buttonStyle:hover {
+  color: rgba(0, 0, 0, 0.854);
+  background-color: white;
+  transition: 0.4s ease-in-out;
+}
+.homeBox .homeImg img {
+  width: 100%;
+  margin-top: 46px;
+}
+/* proGramcard css */
+.proBox h1 {
+  font-size: 47px;
+  font-weight: 600;
+  text-align: center;
+  margin: 50px;
+}
+.proBox h2 {
+  font-size: 47px;
+  font-weight: 600;
+  text-align: center;
+  margin: 60px 0 0 0;
+}
+.proBox p {
+  text-align: center;
+  color: skyblue;
+}
+.proBox .row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cardBox {
+  width: 33.33%;
+  align-items: center;
+}
+.cardBox .cardBox1 {
+  margin: auto;
+  width: 98%;
+  border: 1px solid rgba(0, 0, 0, 0.381);
+}
+.cardBox .cardBox1 .cardImg {
+  width: 85%;
+  margin: auto;
+  margin-top: 23px;
+}
+.cardBox .cardBox1 .cardImg img {
+  width: 100%;
+}
+.cardBox .cardBox1 .textBox {
+  width: 85%;
+  margin: auto;
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+.cardBox .cardBox1 .textBox h3 {
+  font-size: 26px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cardBox .cardBox1 .textBox p {
+  text-align: center;
+  color: #090a2da4;
+  font-weight: 600;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cardBox .cardBox1 .textBox button {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.795);
+  margin-top: 20px;
+  padding: 15px 30px;
+  border-radius: 35px;
+  margin-left: 100px;
+  border: none;
+  background-color: #4acdd5;
+  transition: 0.2s ease-in-out;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.cardBox .cardBox1 .textBox button:hover {
   color: white;
+  background-color: rgba(255, 0, 0, 0.452);
 }
 
-.App-link {
-  color: #61dafb;
+/* program  */
+.proBox .activitiBox .col-7 {
+  /* background-color: #dc3545; */
+  display: flex;
+  justify-content: flex-end;
+}
+.proBox .activitiBox .col-7 img {
+  width: 80%;
+  height: 85%;
+  /* height: auto; */
+}
+.proBox .activitiBox .col-5 .actBox .iconAct {
+  padding: 4px 20px 2px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 0, 0, 0.74);
+  height: 70px;
+  width: 70px;
+  border-radius: 40px;
+  font-size: 30px;
+  /* color:rgba(255, 0, 0, 0.74) ; */
+  cursor: pointer;
+}
+.proBox .activitiBox .col-5 .actText {
+  margin: 0 0;
+  padding: 0 0;
+}
+.proBox .activitiBox .col-5 .actText h1 {
+  margin: 0 0;
+  padding: 0 0 6px 10px;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: start;
+}
+.proBox .activitiBox .col-5 .actText p {
+  padding: 8px 0 0 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #090a2da4;
+}
+.proBox .activitiBox .col-5 .actBtn {
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
+  padding: 15px 30px;
+  border-radius: 35px;
+  margin-left: 100px;
+  border: none;
+  background-color: #ff6799;
+  transition: 0.2s ease-in-out;
+}
+.proBox .activitiBox .col-5 .actBtn:hover {
+  background-color: #4acdd5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* //Activiticard()  */
+.proBox .activiti-Card {
+  position: relative;
+  margin-top: 100px;
+}
+.proBox .activiti-Card .row .col-6 {
+  display: flex;
+  justify-content: center;
+}
+.proBox .activiti-Card .row .col-6 .act-Img {
+  overflow: hidden;
+  width: 90%;
+  height: 100%;
+}
+
+.act-Card img {
+  width: 100%;
+  transition: 0.3s linear;
+}
+.act-Card img:hover {
+  transform: scale(1.1);
+}
+
+.proBox .activiti-Card .row .act-Text1 {
+  position: absolute;
+  top: 80px;
+  left: 370px;
+}
+.proBox .activiti-Card .row .act-Text2 {
+  position: absolute;
+  top: 80px;
+  right: 430px;
+}
+.proBox .activiti-Card .row .act-Text2 p,
+.proBox .activiti-Card .row .act-Text1 p {
+  color: white;
+  font-size: 20px;
+}
+.proBox .activiti-Card .row .act-Text2 h3,
+.proBox .activiti-Card .row .act-Text1 h3 {
+  color: white;
+  font-size: 35px;
+}
+.proBox .activiti-Card .row .act-Text2 button {
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
+  padding: 8px 20px;
+  border-radius: 35px;
+  border: none;
+  background-color: palevioletred;
+  transition: 0.2s ease-in-out;
+}
+.proBox .activiti-Card .row .act-Text2 button:hover {
+  color: white;
+  background-color: #4acdd5;
+}
+.proBox .activiti-Card .row .act-Text1 button {
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
+  padding: 8px 20px;
+  border-radius: 35px;
+  border: none;
+  background-color: #4acdd5;
+  transition: 0.2s ease-in-out;
+}
+.proBox .activiti-Card .row .act-Text1 button:hover {
+  color: white;
+  background-color: palevioletred;
+}
+
+
+.proBox .tec-Row{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.teacherinfo-Box{
+  width: 25%;
+  align-items: center;
+  margin: auto;
+  width: 98%;
+}
+.teacherinfo-Box .teacherinfo-Box1{
+  margin: auto;
+  width: 98%;
+}
+.teacherinfo-Box .teacherinfo-Box1 .teacher-cardImg{
+  width: 85%;
+  margin: auto;
+  margin-top: 23px;
+}
+.teacherinfo-Box .teacherinfo-Box1 .teacher-cardImg img{
+  width: 100%;
+}
+.teacherinfo-Box .teacherinfo-Box1 .info-Box{
+width: 85%;
+margin-top: 23px;
+margin-bottom: 23px;
+}
+.teacherinfo-Box .teacherinfo-Box1 .info-Box h3{
+  font-size: 26px;
+  
+}
+.teacherinfo-Box .teacherinfo-Box1 .info-Box .tec-info{
+  align-items: flex-start;
+  margin: 0;
+}
+
+
+
+
+
+
+/* =====FOOTER ALL CSS==== */
+.footerBox {
+  margin-top: 50px;
+  background-color: #FAFAFA;
+}
+.footerBox .row .colFooter-1{
+  margin: 80px  0 100px 0;
+}
+.footerBox .row .col-6 .footer-Logo img {
+  width: 43%;
+  padding-left: 10px;
+}
+.footerBox .row .colFooter-1 p{
+  font-size: 19px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+.footerBox .row .colFooter-1 .footer-Icon .footerIcon {
+ font-size: 50px;
+ padding-left: 20px;
+
+}
+
+.dropdown {
+  margin-top: 10px;
+  margin-left: 78px;
+  margin-bottom: 20px;
+}
+.footerBox .row .colFooter-2{
+  /* text-align: center; */
+  margin: 80px  0 100px 0;
+}
+.footerBox .row .colFooter-2 h1{
+  font-size: 27px;
+  font-weight: 500;
+  padding-bottom: 15px;
+
+}
+.footerBox .row .colFooter-2 p{
+  font-weight: 100;
+  padding-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+.footerBox .row .colFooter-2 p:hover{
+  color: #70bbff;
+  
+}
+.footerBox .copy-Rightbox{
+border-top: 2px solid black;
+}
+/* .footerBox .copy-Rightbox .col-12 p */
+
+/* Contact box CSS */
+.Contact-Box{
+  background-color: #fafafa;
+}
+.Contact-Box .contact_Img{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.Contact-Box .contact_Img img{
+  width: 600px;
+  
+}
+.Contact-Box .contact_Img .img-info{
+  position: absolute;
+  background-color: #090a2d;
+  border-radius: 10px;
+  left: 50%;
+  top: 55%;
+  transform: translate(-65%, -50%);
+}
+
+.Contact-Box .contact_Img .img-info h1{
+  color: white;
+  padding: 8px 45px;
+  font-size: 40px;
+}
+.Contact-Box .contact_inbox {
+  margin: auto;
+}
+.Contact-Box .contact_inbox .support{
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px rgba(0, 0, 0, 0.564);
+}
+.Contact-Box .contact_inbox .support .container{
+  padding: 40px 40px;
+}
+.Contact-Box .contact_inbox .support .submit .btn_style {
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
+  padding: 14px 40px;
+  border-radius: 35px;
+  border: none;
+  background-color: #4acdd5;
+  transition: 0.2s ease-in-out;
+}
+.Contact-Box .contact_inbox .support .submit .btn_style:hover{
+  color: white;
+  background-color: palevioletred;
+}
+
+/* ====== Gallery css ======  */
+
+.GalleryBox h1 {
+  font-size: 47px;
+  font-weight: 600;
+  text-align: center;
+  margin: 50px;
+}
+.GalleryBox .kids-1{
+  position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 50px;
+}
+.GalleryBox .kids-1 img{
+  width: 95%;
+}
+.GalleryBox .kids-2{
+  position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px 
+}
+.GalleryBox .kids-2 img{
+  width: 95%;
 }

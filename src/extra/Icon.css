@@ -1,0 +1,81 @@
+
+
+.icon-Box .row .col-6 .iconE{
+  font-size: 9rem;
+  text-align: center;
+}
+.icon-Box .row .col-6 h1
+{
+    text-align: center;
+    font-weight: 700;
+}
+.icon-Box .row .col-6 p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.701);
+}
+
+/* // extrahome  */
+.home-Box .text-Home{
+    height: 450px;
+    background-color: rgba(172, 100, 239, 0.589);
+}
+.home-Box .text-Home h1{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+}
+.home-Box .text-Home h1 .home-link{
+    text-decoration: none;
+    color: white;
+    margin: 0 0;
+    padding: 0 0;
+    
+}
+.home-Box .text-Home .btn-home button{
+   font-size: 30px;
+    font-weight: 300;
+    color: black;
+    padding: 12px 35px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    background-color: white;
+}
+.home-Box .text-Home .btn-home button:hover{
+    color: white;
+    background-color: black;
+}
+
+@media only screen and (max-width: 1024px){
+    .home-Box .text-Home h1{
+        font-size: 45px;
+        margin-top: 80px;
+    }
+    .home-Box .text-Home .btn-home button{
+        font-size: 20px;
+
+    }
+}
+@media only screen and (max-width: 770px){
+    .home-Box .text-Home h1{
+        font-size: 40px;
+        margin-top: 70px;
+    }
+    .home-Box .text-Home .btn-home button{
+        font-size: 20px;
+        padding: 12px 28px;
+    }
+}
+@media only screen and (max-width: 430px){
+    .home-Box .text-Home h1{
+        font-size: 29px;
+    }
+    .home-Box .text-Home .btn-home button{
+        font-size: 17px;
+        padding: 12px 28px;
+    }
+}
